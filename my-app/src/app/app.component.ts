@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import {HeroService} from './hero.service'
 
 @Component({
   selector: 'app-root',
@@ -32,6 +34,8 @@ export class AppComponent {
   onSelect(hero: Hero): void {
   	this.selectedHero = hero;
   }
+
+  constructor(private heroService: HeroService) { }
 
 }
 

@@ -9,8 +9,8 @@ export class HeroService {
 
   constructor() { }
 
-  getHeroes(): Hero[] {
-  	return HEROES;
+ getHeroes(): Promise<Hero[]> {
+    return Promise.resolve(HEROES);
   }
 
 }
